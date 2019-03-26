@@ -3,28 +3,31 @@
 <head>
 <link href="game.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Smythe" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Harry Potter card game</title>
 </head>
 
 <body>
+  <div class="wrapper">
   <!--Harry Potter logo-->
+  <div class="left">
   <header>
     <img src="harrypotter.png">
   </header>
-    
   <button onclick="reloadPage()">Restart</button>
-
   <!--Speech Bubble-->
   <div class="bubble">
   <div class="arrow bottom right"></div>
   <p id="mess"></p>
 </div>
-
 <!---The Sorting hat-->
 <div class="hat">
 <img src="sortinghat.png" alt="sortinghat">
 </div>
 
+</div>
+
+<div class="right">
 <!--The game board-->
 <section class="game-container">
 <div class="card" data-symbol="owl">
@@ -96,9 +99,9 @@
 <script src="game.js"></script>
 
 <!--Music-->
-<iframe src="music.mp3" allow="autoplay">
-
-
+<iframe src="music.mp3" allow="autoplay"></iframe>
+</div>
+</div>
 
 </body>
 </html
