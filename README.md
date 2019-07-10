@@ -1,6 +1,6 @@
 <h1>Harry Potter memory game</h1>
 Here is the Surge link:
-<h4>http://nauseating-loaf.surge.sh/</h4>
+<h4>http://oval-mark.surge.sh/</h4>
 
 This is my first vanilla JavaScript project. It's Harry Potter themed.I used HTML5, CSS3 and vanilla JavaScript. I've made it after just 2 months of coding. So it's not perfect.😁 But it's good :D I'm sorry 'cause I didn't put the files in separate folders. :D
 <br>
