@@ -1,13 +1,51 @@
 html{
 		-webkit-box-sizing: border-box;
+	        -moz-box-sizing: border-box;
+		 box-sizing: border-box;
+}
+body {
+     background: url(background.jpg);
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+             background-size: cover;
+     overflow: hidden;
+     cursor: url("harrycursor.png"), auto;	
+     height: 100vh;
+     width: 100vw;
+}
+
+.wrapper{
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 2fr;
+	grid-template-columns: 1fr 2fr;
+	    grid-template-areas: 
+	'left right';
+}
+
+.left{
+	 position: relative;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: auto;
+	grid-template-columns: auto;
+	-ms-grid-rows: 1fr 1fr 1fr 2fr;
+	grid-template-rows: 1fr 1fr 1fr 2fr;
+	    grid-template-areas: 
+	'top'
+	'middle'
+	'button'
+	'bottom';html{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		        box-sizing: border-box;
 }
 body {
      background: url(background.jpg);
      -webkit-background-size: cover;
+     -moz-background-size: cover;
              background-size: cover;
      overflow: hidden;
-     cursor: url("harrycursor.png"), auto;	
      height: 100vh;
      width: 100vw;
 }
@@ -56,6 +94,7 @@ body {
 	width: 790px;
 	border-radius: 15px;
    -webkit-perspective: 1000px;
+   -moz-perspective: 1000px;
            perspective: 1000px;
    position: fixed;
    background-repeat: no-repeat;
@@ -77,11 +116,14 @@ body {
 	border-radius: 10px;
 	border: 5px solid black;
 	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
 	    -ms-transform: scale(1);
 	        transform: scale(1);
 	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
 	        transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform .5s;
+	-moz-transition: -moz-transform .5s;
 	transition: -webkit-transform .5s;
 	-o-transition: transform .5s;
 	transition: transform .5s;
@@ -93,6 +135,7 @@ body {
      -ms-transform: scale(0.97);
          transform: scale(0.97);
   -webkit-transition: -webkit-transform .2s;
+ -moz-transition: -moz-transform .2s;
   transition: -webkit-transform .2s;
   -o-transition: transform .2s;
   transition: transform .2s;
@@ -110,13 +153,16 @@ body {
 	  margin-top: -30px;
 	  margin-bottom: 20px;
 	  position: absolute;
-	  -webkit-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
 	          backface-visibility: hidden;
+	          opacity: 0.9;
 	 }
 .card .front {
 	width: 100px;
 	height: 100px;
 	 -webkit-box-align: center;
+	 -moz-box-align: center;
 	     -ms-flex-align: center;
 	         -webkit-align-items: center;
 	         align-items: center;
@@ -125,17 +171,22 @@ body {
 	  margin-bottom: 20px;
 	  position: absolute;
 	  -webkit-backface-visibility:hidden;
+	 -moz-backface-visibility:hidden;
 	          backface-visibility:hidden; 
 	  -webkit-transform: rotateY(180deg); 
+	 -moz-transform: rotateY(180deg); 
 	          transform: rotateY(180deg);
+	          opacity: 0.9;
 }
 .card:hover{
    -webkit-box-shadow: 0 15px 30px rgba(0,0,0.5);
+	-moz-box-shadow: 0 15px 30px rgba(0,0,0.5);
            box-shadow: 0 15px 30px rgba(0,0,0.5);
 
 }
 .card.flip {
   -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
@@ -223,6 +274,361 @@ button {
 
 button:hover{
    -webkit-box-shadow: 0 0 50px rgba(33,33,33,.4);
+	-moz-box-shadow: 0 0 50px rgba(33,33,33,.4);
+           box-shadow: 0 0 50px rgba(33,33,33,.4);
+}
+/*Music*/
+iframe{
+	visibility: hidden;
+}
+/*====================MEDIA QUERIES=======================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+  
+.game-container{
+		grid-gap: 5px;
+	padding: 10px 10px;
+	width: 500px;
+	margin-left: 40px;
+}
+.card {
+	background-image: url(papirus.jpg);
+	color: black;
+	text-align: center;
+	margin-top: 10px;
+	padding: 50px;
+	width: 10px;
+	height: 10px;
+}
+
+.card .back {
+	width: 80px;
+	height: 80px;
+	  margin-left: -40px;
+	  margin-top: -40px;
+	 }
+.card .front {
+	width:80px;
+	height: 80px;
+	  margin-left: -40px;
+	  margin-top: -40px;
+}
+
+  .hat img {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+	display: block;
+	position: relative; 
+	grid-area: bottom;
+	 background-repeat: no-repeat;
+	 height: 250px;
+	 width: 230px;
+	 position: left;
+	 margin-top: 40px;
+	 margin-left: -5px;
+}
+
+.bubble {
+    width: 150px;
+    height: 50px;
+
+}
+button {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	display: block;
+	grid-area: button;
+	background-image: url("papirus.jpg");
+	font-family: 'Smythe', cursive;
+	width: 100px;
+	height: 40px;
+	font-size: 25px;
+	border-radius: 10px;
+	border: 1px solid black;
+	margin-top: -430px;
+	margin-left: 160px;
+}
+header img{
+height: 200px;
+margin-left: 10px;
+
+ }
+  #mess {
+	font-size: 25px;
+}
+
+}
+
+@media screen and (max-width: 1400px) , screen and (max-height: 800px) {
+
+.game-container{
+		grid-gap: 1px;
+	padding: 10px 10px;
+	width: 600px;
+	height: 590px;
+	margin-left: 20px;
+}
+.card {
+	background-image: url(papirus.jpg);
+	color: black;
+	text-align: center;
+	margin-top: 10px;
+	padding: 55px;
+	width: 10px;
+	height: 10px;
+}
+
+.card .back {
+	width:90px;
+	height: 90px;
+	  margin-left: -45px;
+	  margin-top: -40px;
+	 }
+
+.card .front {
+	width:90px;
+	height: 90px;
+    margin-left: -45px;
+	margin-top: -40px;
+}
+
+  .hat img {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+	display: block;
+	position: relative; 
+	grid-area: bottom;
+	 background-repeat: no-repeat;
+	 height: 230px;
+	 width: 220px;
+	 position: left;
+	 margin-top: 70px;
+	 margin-left: 50px;
+}
+
+.bubble {
+	margin-top: -40px;
+    width: 190px;
+    height: 50px;
+        margin-left: 80px;
+}
+
+button {
+	font-size: 25px;
+	width: 100px;
+	height: 40px;
+	margin-top: -450px;
+	margin-left: 170px;
+}
+header img{
+margin-top: -10px;
+margin-left: 10px;
+
+ }
+ #mess {
+	font-size: 25px;
+}
+}
+}
+
+/*The game container*/
+.game-container{
+	-ms-grid-row: 1;
+	-ms-grid-column: 2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	grid-area: right;
+	display: -ms-grid;
+	display: grid;
+	background-color: hsl(180, 100%, 13%, 0.6);
+    color: green;
+	-ms-grid-columns: auto 12px auto 12px auto 12px auto;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 10px;
+	padding: 30px 30px;
+	width: 790px;
+	border-radius: 15px;
+   -webkit-perspective: 1000px;
+   -moz-perspective: 1000px;
+           perspective: 1000px;
+   position: fixed;
+   background-repeat: no-repeat;
+	}
+/*Cards*/
+.card {
+	background-image: url(papirus.jpg);
+	color: black;
+	text-align: center;
+	padding: 70px;
+	width: 40px;
+	height: 40px;
+	font-size: 15px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        -webkit-align-items: center;
+	        align-items: center;
+	margin: auto;
+	border-radius: 10px;
+	border: 5px solid black;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .5s;
+	-moz-transition: -moz-transform .5s;
+	transition: -webkit-transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+	transition: transform .5s, -webkit-transform .5s;
+}
+
+.card:active {
+ -webkit-transform: scale(0.97);
+     -ms-transform: scale(0.97);
+         transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+ -moz-transition: -moz-transform .2s;
+  transition: -webkit-transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.card .back {
+	width: 100px;
+	height: 100px;
+	 -webkit-box-align: center;
+	     -ms-flex-align: center;
+	         -webkit-align-items: center;
+	         align-items: center;
+	  margin-left: -50px;
+	  margin-top: -30px;
+	  margin-bottom: 20px;
+	  position: absolute;
+	  -webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	          backface-visibility: hidden;
+	 }
+.card .front {
+	width: 100px;
+	height: 100px;
+	 -webkit-box-align: center;
+	 -moz-box-align: center;
+	     -ms-flex-align: center;
+	         -webkit-align-items: center;
+	         align-items: center;
+	  margin-left: -50px;
+	  margin-top: -30px;
+	  margin-bottom: 20px;
+	  position: absolute;
+	  -webkit-backface-visibility:hidden;
+	 -moz-backface-visibility:hidden;
+	          backface-visibility:hidden; 
+	  -webkit-transform: rotateY(180deg); 
+	 -moz-transform: rotateY(180deg); 
+	          transform: rotateY(180deg);
+}
+.card:hover{
+   -webkit-box-shadow: 0 15px 30px rgba(0,0,0.5);
+	-moz-box-shadow: 0 15px 30px rgba(0,0,0.5);
+           box-shadow: 0 15px 30px rgba(0,0,0.5);
+
+}
+.card.flip {
+  -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/*The Sorting Hat */
+.hat img {
+	-ms-grid-row: 4;
+	-ms-grid-column: 1;
+	display: block;
+	position: relative; 
+	grid-area: bottom;
+	 background-repeat: no-repeat;
+	 height: 350px;
+	 width: 330px;
+	 position: left;
+	 margin-top: 50px;
+}
+
+/*Speech Bubble*/
+.bubble {
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+	display: block;
+	grid-area: middle;
+    background-color: #f8f8f8;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: 140px;
+}
+.bubble .arrow {
+    border-style: solid;
+    position: absolute;
+}
+ 
+.bottom {
+    border-color: #c8c8c8 transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom: -8px;
+}
+.bottom:after {
+    border-color: #f8f8f8 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    bottom: 1px;
+    content: "";
+    position: absolute;
+    left: -7px;
+}
+/*_________________________________________________________________________*/
+
+/* Messages of encouragement */
+#mess {
+	font-family: 'Smythe', cursive;
+	font-size: 35px;
+	padding: 15px;
+	color: black;
+	margin-top: -2px;
+}
+
+header{
+margin-left: 50px;
+ }
+/*The restart button*/
+button {
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	display: block;
+	grid-area: button;
+	background-image: url("papirus.jpg");
+	font-family: 'Smythe', cursive;
+	width: 150px;
+	height: 50px;
+	font-size: 35px;
+	border-radius: 10px;
+	border: 1px solid black;
+	margin-top: -600px;
+	margin-left: 120px;
+}
+
+
+button:hover{
+   -webkit-box-shadow: 0 0 50px rgba(33,33,33,.4);
+	-moz-box-shadow: 0 0 50px rgba(33,33,33,.4);
            box-shadow: 0 0 50px rgba(33,33,33,.4);
     cursor: url("harrycursor.png"), auto;
 }
@@ -376,5 +782,4 @@ margin-left: 10px;
  #mess {
 	font-size: 25px;
 }
-
 }
